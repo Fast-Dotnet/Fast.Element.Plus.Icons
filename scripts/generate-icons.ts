@@ -7,11 +7,11 @@ import { prepareSvgSource } from "./svg-source";
 
 /** 描述单个 SVG 源及其生成组件所需的稳定元数据。 */
 interface IconSource {
-	/** 对外导出的 PascalCase Vue 组件名。 */
+	/** 对外导出的 PascalCase Vue 组件名 */
 	componentName: string;
-	/** 不含扩展名的 lowerCamelCase SVG 文件名。 */
+	/** 不含扩展名的 lowerCamelCase SVG 文件名 */
 	iconName: string;
-	/** 已校验并完成文本归一化的 SVG 标记。 */
+	/** 已校验并完成文本归一化的 SVG 标记 */
 	svg: string;
 }
 
