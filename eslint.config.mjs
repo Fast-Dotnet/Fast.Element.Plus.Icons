@@ -472,8 +472,8 @@ export default defineConfig(
 		rules: {
 			/** TSX 通常用于 UI 组件，不强制为导出组件补写可由 TypeScript 稳定推断的 JSX 返回类型。 */
 			"@typescript-eslint/explicit-module-boundary-types": "off",
-			/** TSX 事件属性由框架接管异步结果，允许把 Promise 返回函数传给 void 回调属性；其他误用继续检查。 */
-			"@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: { attributes: false } }],
+			/** TSX 的 JSX 属性和对象属性允许接收 Promise 返回函数，即使目标类型为 `() => void`；其他 Promise 误用继续检查。 */
+			"@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: { attributes: false, properties: false } }],
 		},
 	},
 	// 模块导入正确性与排序规则，直接同步自 Fast.ESLint.Config。
