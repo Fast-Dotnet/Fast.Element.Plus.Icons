@@ -47,6 +47,7 @@
 	"unpkg": "./dist/index.global.min.js",
 	"jsdelivr": "./dist/index.global.min.js",
 	"publishConfig": {
+		"registry": "https://registry.npmjs.org",
 		"access": "public"
 	},
 	"scripts": {
